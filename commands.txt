@@ -1,0 +1,12 @@
+git clone git@github.com:Kei-Nie/qtm350-quiz01.git
+cd qtm350-quiz01
+touch commands.txt
+git checkout -b feature-update
+mkdir reports
+touch reports/summary.md
+echo "This document provides a summary of the project updates." > reports/summary.md
+git add reports
+touch reports/file{1,2,3}.txt
+mv data/raw-data.csv data/input-data.csv
+mkdir -p scripts/backup && cp scripts/*.py scripts/backup/
+rm docs/documentation.md

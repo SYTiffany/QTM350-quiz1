@@ -1,29 +1,24 @@
-# Git Commands Used in Quiz 01
-
-  567  mkdir reports
-
-  568  touch reports/summary.md
-
-  569  echo "This document provides a summary of the project updates." > reports/summary.md
-
-  570  git add reports
-  571  git commit -m "Add reports directory"
-  572  touch reports/file{1..3}.txt
-  573  mv data/raw-data.csv data/input-data.csv
-
-  574  mkdir scripts/backup && cp scripts/*.py scripts/backup/
-
-  575  rm docs/documentation.md
-
-  576  git add .
-git commit -m "Update project files"
-
-  577  touch .gitignore
-
-  578  echo -e "temp/
-dataset0?.csv" >> .gitignore
-  579  cat .gitignore
-
-  580  git add .gitignore && git commit -m "Add .gitignore file"
-  581  git checkout main
-  582  git merge feature-update
+1. git clone https://github.com/mingketian/qtm350-quiz01.git
+2. cd qtm350-quiz01
+3. touch commands.txt
+4. git checkout -b feature-update
+5. mkdir reports
+6. touch reports/summary.md
+7. echo "This document provides a summary of the project updates." > reports/summary.md
+8. git add reports
+9. git commit -m "Add reports directory"
+10. touch reports/file{1..3}.txt
+11. mv data/raw-data.csv data/input-data.csv
+12. mkdir scripts/backup && cp scripts/*.py scripts/backup/
+13. rm docs/documentation.md
+14. git add .
+15. git commit -m "Update project files"
+16. touch .gitignore
+17. echo -e "temp/\ndataset0?.csv" >> .gitignore
+18. cat .gitignore
+19. git add .gitignore && git commit -m "Add .gitignore file"
+20. git checkout main
+21. git merge feature-update
+22. echo -e "# Git Commands Used in Quiz 01\n\n$(history | grep -E 'git |touch |mkdir |echo |rm |mv |cp |cat |for')" > commands.txt
+23. git add commands.txt && git commit -m "I've updated the commands.txt with all Git operations"
+24. git push origin main

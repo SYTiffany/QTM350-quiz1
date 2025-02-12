@@ -1,0 +1,91 @@
+Last login: Wed Feb 12 15:16:21 on ttys006
+jackyan@Jackys-MacBook-Pro ~ % git clone https://github.com/JackyAn0072/qtm350-quiz01
+Cloning into 'qtm350-quiz01'...
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 8 (delta 0), reused 8 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (8/8), done.
+jackyan@Jackys-MacBook-Pro ~ % cd https://github.com/JackyAn0072/qtm350-quiz01
+cd: no such file or directory: https://github.com/JackyAn0072/qtm350-quiz01
+jackyan@Jackys-MacBook-Pro ~ % cd qtm350-quiz01
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % touch commands.txt
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % git checkout -b feature-update
+
+Switched to a new branch 'feature-update'
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % mkdir reports
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % touch reports/summary.md
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % echo "This document provides a summary of the project updates." > reports/summary.md
+
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % git add reports
+
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % git commit -m "Add reports directory"
+
+[feature-update bc1107d] Add reports directory
+ 1 file changed, 1 insertion(+)
+ create mode 100644 reports/summary.md
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % touch reports/file{1..3}.txt
+
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % mv data/raw-data.csv data/input-data.csv
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % mkdir scripts/backup && cp scripts/*.py scripts/backup/
+
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % rm docs/documentation.md
+
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % git add .
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % git commit -m "Update project files"
+[feature-update 1c4d9ca] Update project files
+ 9 files changed, 1 deletion(-)
+ rename data/raw-data.csv => commands.txt (100%)
+ create mode 100644 data/input-data.csv
+ delete mode 100644 docs/documentation.md
+ create mode 100644 reports/file1.txt
+ create mode 100644 reports/file2.txt
+ create mode 100644 reports/file3.txt
+ create mode 100644 scripts/backup/01-setup.py
+ create mode 100644 scripts/backup/02-data-cleaning.py
+ create mode 100644 scripts/backup/03-data-modelling.py
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % touch .gitignore
+
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % echo -e "temp/                 
+dataset0?.csv" > .gitignore
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % cat .gitignore
+
+temp/
+dataset0?.csv
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % git add .gitignore && git commit -m "Add .gitignore file"
+
+[feature-update 19dea51] Add .gitignore file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % git checkout main
+
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+jackyan@Jackys-MacBook-Pro qtm350-quiz01 % git merge feature-update
+
+Updating 4258465..19dea51
+Fast-forward
+ .gitignore                          | 2 ++
+ data/raw-data.csv => commands.txt   | 0
+ data/input-data.csv                 | 0
+ docs/documentation.md               | 1 -
+ reports/file1.txt                   | 0
+ reports/file2.txt                   | 0
+ reports/file3.txt                   | 0
+ reports/summary.md                  | 1 +
+ scripts/backup/01-setup.py          | 0
+ scripts/backup/02-data-cleaning.py  | 0
+ scripts/backup/03-data-modelling.py | 0
+ 11 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ rename data/raw-data.csv => commands.txt (100%)
+ create mode 100644 data/input-data.csv
+ delete mode 100644 docs/documentation.md
+ create mode 100644 reports/file1.txt
+ create mode 100644 reports/file2.txt
+ create mode 100644 reports/file3.txt
+ create mode 100644 reports/summary.md
+ create mode 100644 scripts/backup/01-setup.py
+ create mode 100644 scripts/backup/02-data-cleaning.py
+ create mode 100644 scripts/backup/03-data-modelling.py
+

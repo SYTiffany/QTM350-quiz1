@@ -1,0 +1,25 @@
+ejinrig@EMMA:~$ git clone https://github.com/ejinright/qtm350-quiz01
+ejinrig@EMMA:~$ cd qtm350-quiz01
+ejinrig@EMMA:~/qtm350-quiz01$ touch commands.txt
+ejinrig@EMMA:~/qtm350-quiz01$ git add .
+ejinrig@EMMA:~/qtm350-quiz01$ git checkout -b feature-update
+ejinrig@EMMA:~/qtm350-quiz01$ mkdir reports
+ejinrig@EMMA:~/qtm350-quiz01$ cd reports
+ejinrig@EMMA:~/qtm350-quiz01/reports$ touch summary.md
+ejinrig@EMMA:~/qtm350-quiz01/reports$ echo 'This document provides a summary of the project updates' > summary.md
+ejinrig@EMMA:~/qtm350-quiz01/reports$ git add .
+ejinrig@EMMA:~/qtm350-quiz01/reports$ git commit -m 'Add reports directory'
+ejinrig@EMMA:~/qtm350-quiz01/reports$ touch {file1,file2,file3}.txt
+ejinrig@EMMA:~/qtm350-quiz01/reports$ mv ../data/raw-data.csv ../data/input-data.csv
+ejinrig@EMMA:~/qtm350-quiz01/reports$ cd ..
+ejinrig@EMMA:~/qtm350-quiz01$ mkdir ./scripts/backup && cp ./scripts/*.py ./scripts/backup
+ejinrig@EMMA:~/qtm350-quiz01$ rm ./docs/documentation.md
+ejinrig@EMMA:~/qtm350-quiz01$ git add .
+ejinrig@EMMA:~/qtm350-quiz01$ git commit -m 'Update project files'
+ejinrig@EMMA:~/qtm350-quiz01$ touch .gitignore
+ejinrig@EMMA:~/qtm350-quiz01$ echo 'temp/
+dataset0?.csv' > .gitignore
+ejinrig@EMMA:~/qtm350-quiz01$ cat .gitignore
+ejinrig@EMMA:~/qtm350-quiz01$ git add . && git commit -m 'Add .gitignore file'
+ejinrig@EMMA:~/qtm350-quiz01$ git checkout main
+ejinrig@EMMA:~/qtm350-quiz01$ git merge feature-update

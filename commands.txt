@@ -1,0 +1,155 @@
+    1  ls
+    2  ls
+    3  touch README.md
+    4  ls
+    5  ok 
+    6  cd
+    7  mkdir "cli_assignment"
+    8  cd
+    9  ls
+   10  echo "# CLI Assignment" >> README.md
+   11  cat README.md
+   12  cd cli_assignment
+   13  mkdir data
+   14  ls -1
+   15  ls -l
+   16  man ls
+   17  ls -a
+   18  cd..
+   19  cd ..
+   20  ls -a
+   21  ls
+   22  touch README.md 
+   23  ls
+   24  echo "# CLI Assignment" >> README.md
+   25  cat README.md 
+   26  cd cli_assignment 
+   27  mkdir data 
+   28  ls -l
+   29  ls -a
+   30  cd ..
+   31  ls -a
+   32  mkdir my_ds_project_revision
+   33  cd my_ds_project_revision
+   34  pwd
+   35  git init
+   36  echo "# My Data Science Project Revision" > README.md 
+   37  echo "This project is a hands-on revision of setting up a data science workflow with Git and GitHub." >> README.md 
+   38  git add README.md
+   39  git commit -m "Initial commit: Add README"
+   40  git config --global user.name "Alan"
+   41  git config --global user.email"alan.na@emory.edu"
+   42  git commit -m "Initial commit: Add README"
+   43  git remote add origin https://github.com/a1an-na/my-ds-project-revision.git 
+   44  git branch -M main
+   45  git push -u origin main
+   46  git push -u origin main
+   47  git push -u origin main
+   48  git push -u origin main 
+   49  ssh-keygen -t ed25519 -C "alan.na@emory.edu"
+   50  cat ~/.ssh/id_ed25519.pub
+   51  git remote set-url origin git@github.com:a1an-na/my-ds-project-revision.git 
+   52  git push -u origin main
+   53  mkdir -p data/{raw,processed} notebooks scripts results docs
+   54  ls -R
+   55  touch scripts/01_data_preprocessing.py scripts/02_analysis.py notebooks/exploratory_data_analysis.ipynb data/raw/placeholder.txt docs/project_plan.md
+   56  echo "## Project Plan" > docs/project_plan.md
+   57  echo "1. Setup project structure." >> docs/project_plan.md
+   58  echo "2. Implement data preprocessing." >> docs/project_plan.md
+   59  echo "3. Perform analysis." >> docs/project_plan.md
+   60  cat docs/project_plan.md
+   61  touch .gitignore
+   62  echo "# Python" >> .gitignore
+   63  echo "__pycache__/" >> .gitignore
+   64  echo "*.pyc" >> .gitignore
+   65  echo "*.pyo" >> .gitignore
+   66  echo "*.pyd" >> .gitignore
+   67  echo "" >> .gitignore
+   68  echo "# Jupyter Notebook" >> .gitignore
+   69  echo ".ipynb_checkpoints/" >> .gitignore
+   70  echo "" >> .gitignore
+   71  echo "# Data files" >> .gitignore
+   72  echo "data/raw/*" >> .gitignore
+   73  echo "data/processed/*" >> .gitignore
+   74  echo "" >> .gitignore
+   75  echo "# Results" >> .gitignore
+   76  echo "results/*" >> .gitignore
+   77  echo "" >> .gitignore
+   78  echo "# Environment" >> .gitignore
+   79  echo ".env" >> .gitignore
+   80  echo "venv/" >> .gitignore
+   81  echo "env/" >> .gitignore
+   82  echo '!data/raw/placeholder.txt' >> .gitignore
+   83  cat .gitignore
+   84  git add .
+   85  git commit -m "Feat: Setup project directory structure and gitignore"
+   86  git push origin main 
+   87  git checkout -b feature/add-initial-script-logic
+   88  echo "# scripts/01_data_preprocessing.py" > scripts/01_data_preprocessing.py
+   89  echo "import pandas as pd" >> scripts/01_data_preprocessing.py
+   90  echo "" >> scripts/01_data_preprocessing.py
+   91  echo "def load_data(filepath):" >> scripts/01_data_preprocessing.py
+   92  echo "    print(f\"Loading data from {filepath}...\")" >> scripts/01_data_preprocessing.py
+   93  echo "    # df = pd.read_csv(filepath)" >> scripts/01_data_preprocessing.py
+   94  echo "    # print(\"Data loaded successfully.\")" >> scripts/01_data_preprocessing.py
+   95  echo "    # return df" >> scripts/01_data_preprocessing.py
+   96  echo "" >> scripts/01_data_preprocessing.py
+   97  echo "print(\"Data preprocessing script initialized.\")" >> scripts/01_data_preprocessing.py
+   98  cat scripts/01_data_preprocessing.py
+   99  cp data/raw/placeholder.txt data/processed/processed_placeholder.txt
+  100  git add scripts/01_data_preprocessing.py data/processed/processed_placeholder.txt
+  101  git commit -m "Feat: Add initial logic to preprocessing script and simulate output"
+  102  git checkout main
+  103  git merge feature/add-initial-script-logic
+  104  git branch -d feature/add-initial-script-logic
+  105  git push origin main
+  106  touch project_log.md
+  107  echo "# Project Log" > project_log.md
+  108  echo "## Commands Used" >> project_log.md
+  109  echo "\`\`\`bash" >> project_log.md
+  110  echo "git checkout -b feature/add-initial-script-logic" >> project_log.md
+  111  echo "echo '# scripts/01_data_preprocessing.py' > scripts/01_data_preprocessing.py" >> project_log.md
+  112  # (add more commands here as you wish)
+  113  echo "\`\`\`" >> project_log.md
+  114  git add project_log.md
+  115  git commit -m "Docs: Add project log with commands"
+  116  git push origin main
+  117  echo "# Project Log" > project_log.md
+  118  echo "## Commands Used" >> project_log.md
+  119  echo "\`\`\`bash" >> project_log.md
+  120  echo "git checkout -b feature/add-initial-script-logic" >> project_log.md
+  121  echo "echo '# scripts/01_data_preprocessing.py' > scripts/01_data_preprocessing.py" >> project_log.md
+  122  # (add more commands here as you wish)
+  123  echo "\`\`\`" >> project_log.md
+  124  git clone git clone git@github.com:a1an-na/qtm350-quiz01.git
+  125  git clone git@github.com:a1an-na/qtm350-quiz01.git
+  126  git clone git@github.com:a1an-na/qtm350-summer-quiz01.git
+  127  cd qtm350-summer-quiz-01
+  128  ls
+  129  cd qtm350-summer-quiz01
+  130  touch commands.txt
+  131  git checkout -b feature-update
+  132  git branch
+  133  mkdir reports
+  134  touch reports/summary.md
+  135  ls reports
+  136  echo "This document provides a summary of the project updates." > reports/summary.md
+  137  git add reports
+  138  git commit -m "Add reports directory"
+  139  touch reports/file{1..3}.txt
+  140  ls reports
+  141  mv data/raw-data.csv data/input-data.csv
+  142  ls data
+  143  mkdir scripts/backup && cp scripts/*.py scripts/backup/
+  144  rm docs/documentation.md
+  145  git add .
+  146  git commit -m "Update project files"
+  147  touch .gitignore
+  148  ls -a
+  149  echo "temp/" >> .gitignore
+  150  echo "dataset0?.csv" >> .gitignore
+  151  cat .gitignore
+  152  git add .gitignore && git commit -m "Add .gitignore file"
+  153  git checkout main
+  154  git merge feature-update
+  155  history > commands.txt
